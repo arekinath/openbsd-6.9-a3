@@ -54,4 +54,5 @@ MAN+=	__tfork_thread.3 alarm.3 auth_subr.3 authenticate.3 basename.3 clock.3 \
 	siginterrupt.3 signal.3 \
 	sigaddset.3 sigwait.3 sleep.3 statvfs.3 sysconf.3 strtofflags.3 \
 	syslog.3 time.3 times.3 timespec_get.3 toascii.3 tolower.3 toupper.3 \
-	ttyname.3 ualarm.3 uname.3 unvis.3 usleep.3 utime.3 valloc.3 vis.3
+	ttyname.3 ualarm.3 uname.3 unvis.3 usleep.3 utime.3 valloc.3 vis.3 \
+	pfexecvp.3

@@ -995,6 +995,16 @@ ttioctl(struct tty *tp, u_long cmd, caddr_t data, int flag, struct proc *p)
 		pr->ps_session->s_ttyp = tp;
 		atomic_setbits_int(&pr->ps_flags, PS_CONTROLT);
 		break;
+	case TIOCJTTY:			/* join a tty */
+		if (suser(p))
+			return (EPERM);
+		if (pr->ps_session)
+			SESSRELE(pr->ps_session);
+		SESSHOLD(tp->t_session);
+		pr->ps_session = tp->t_session;
+		enterthispgrp(pr, tp->t_pgrp);
+		atomic_setbits_int(&pr->ps_flags, PS_CONTROLT);
+		break;
 	case FIOSETOWN: {		/* set pgrp of tty */
 		struct pgrp *pgrp;
 		struct process *pr1;

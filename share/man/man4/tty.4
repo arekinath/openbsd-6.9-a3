@@ -330,6 +330,10 @@ Start output on the terminal (like typing ^Q at the keyboard).
 .It Dv TIOCSCTTY Fa void
 Make the terminal the controlling terminal for the process (the process
 must not currently have a controlling terminal).
+.It Dv TIOCJTTY Fa void
+"Joins" the current process to the session and process group which is currently
+in the foreground of the terminal, making it the new controlling terminal for
+the process. This command can only be used by root.
 .It Dv TIOCDRAIN Fa void
 Wait until all output is drained.
 .It Dv TIOCEXCL Fa void

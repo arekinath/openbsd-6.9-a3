@@ -709,6 +709,9 @@ openlog
 openlog_r
 pause
 pclose
+pfexecve
+pfexecvp
+pfexecvpe
 popen
 posix_spawn
 posix_spawn_file_actions_addclose

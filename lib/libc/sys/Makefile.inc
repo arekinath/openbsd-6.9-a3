@@ -46,7 +46,7 @@ ASM=	__semctl.o __syscall.o __thrsigdivert.o \
 	bind.o chdir.o chflags.o chflagsat.o chmod.o chown.o chroot.o \
 	clock_getres.o clock_settime.o \
 	dup.o dup2.o dup3.o \
-	execve.o \
+	execve.o pfexecve.o \
 	faccessat.o fchdir.o fchflags.o fchmod.o fchmodat.o fchown.o \
 	fchownat.o fhopen.o fhstat.o fhstatfs.o \
 	flock.o fpathconf.o fstat.o fstatat.o fstatfs.o \
@@ -197,4 +197,5 @@ MAN+=	__get_tcb.2 __thrsigdivert.2 __thrsleep.2 _exit.2 accept.2 \
 	sigprocmask.2 sigreturn.2 sigsuspend.2 socket.2 \
 	socketpair.2 stat.2 statfs.2 swapctl.2 symlink.2 \
 	sync.2 sysarch.2 syscall.2 sysctl.2 thrkill.2 truncate.2 \
-	umask.2 unlink.2 unveil.2 utimes.2 utrace.2 vfork.2 wait.2 write.2
+	umask.2 unlink.2 unveil.2 utimes.2 utrace.2 vfork.2 wait.2 write.2 \
+	pfexecve.2

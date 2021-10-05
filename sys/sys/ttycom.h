@@ -122,6 +122,7 @@ struct tstamps {
 #define	TIOCGSID	_IOR('t', 99, int)	/* get sid of tty */
 #define	TIOCCONS	_IOW('t', 98, int)	/* become virtual console */
 #define	TIOCSCTTY	 _IO('t', 97)		/* become controlling tty */
+#define	TIOCJTTY	 _IO('t', 124)		/* join another tty (root) */
 #define	TIOCEXT		_IOW('t', 96, int)	/* pty: external processing */
 #define	TIOCSIG		_IOW('t', 95, int)	/* pty: generate signal */
 #define	TIOCDRAIN	 _IO('t', 94)		/* wait till output drained */
